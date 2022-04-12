@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 
 '''
 2022.04.08 이동한
+figure_1
 edge 감지 / 이미지 그라디언트
 subplot(nrows, ncols, index)
 '''
@@ -46,6 +47,7 @@ plt.imshow(canny.astype('uint8'))
 plt.show()
 
 '''
+figure_2
 팽창, 열기, 닫기, 침식
 '''
 
@@ -80,6 +82,7 @@ plt.imshow(closing)
 plt.show()
 
 '''
+figure_3
 시점 변환
 '''
 
@@ -100,6 +103,7 @@ plt.imshow(warped)
 plt.show()
 
 '''
+figure_4
 이미지 피라미드
 '''
 
@@ -127,6 +131,7 @@ plt.imshow(larger)
 plt.show()
 
 '''
+figure_5
 자르기. 이미지 특정 부분을 가져오는 데 사용
 '''
 image = cv2.imread('confirm.jpg')

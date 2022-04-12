@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 
 '''
+figure_10
 Hough Line을 사용한 라인 감지
 임계값은 라인으로 간주되기 위한 최소치 
 '''
@@ -41,6 +42,7 @@ plt.imshow(image)
 plt.show()
 
 '''
+figure_11
 코너 찾기
 이미지 모서리를 찾기 위해 cornerHarris 함수 사용
 '''
@@ -65,6 +67,7 @@ plt.show()
 
 '''
 2022.04.12 이동한
+figure_12
 원, 타원 계산
 SimpleBlobDetector = BLOB는 이진scale로 연결된 픽셀 그룹
 자잘한 객체는 노이즈로 여기고 특정 크기 이상의 객체만 찾아내는 검출기

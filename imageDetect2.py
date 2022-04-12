@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 '''
 2022.04.11 이동한
+figure_6
 크기 조정, 보간 및 크기 조정 / 보간(interpolation) = 두 점을 연결하는 궤적 생성, 보통 정보를 압축한 것을 다시 복원하기 위함
 이미지
 '''
@@ -31,6 +32,7 @@ plt.imshow(img_scaled)
 plt.show()
 
 '''
+figure_7
 임계값, 적응 임계값 및 이진화(이미지의 흑백처리)
 binary_image = 흑백으로만 표현한 이미지
 Threshholding = 여러값을 임계점 기준으로 두 가지 부류로 나누는 방법
@@ -64,6 +66,7 @@ plt.imshow(th3)
 plt.show()
 
 '''
+figure_8
 선명하게 하기
 '''
 image = cv2.imread('confirm.jpg')
@@ -82,6 +85,7 @@ plt.imshow(sharpened)
 plt.show()
 
 '''
+figure_9
 구조의 윤곽 식별
 물체의 모양 식별하는데 도움이 됨
 canny edge를 매개변수로 전달해야 하는 findContours함수 사용
