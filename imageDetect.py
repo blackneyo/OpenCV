@@ -320,25 +320,25 @@ subplot(nrows, ncols, index)
 '''
 2022.04.12 이동한
 원, 타원 계산
-SimpleBlobDetector
-필터 종류
+SimpleBlobDetector = BLOB는 이진scale로 연결된 픽셀 그룹
+자잘한 객체는 노이즈로 여기고 특정 크기 이상의 객체만 찾아내는 검출기
 '''
 image = cv2.imread('BlobTest.jpg')
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 plt.figure(figsize=(10, 10))
-detector = cv2.SimpleBlobDetector_create()
+detector = cv2.SimpleBlobDetector_create() # BLOB 검출기 생성자
 
 # Detect Blobs
-points = detector.detect(image)
+points = detector.detect(image)  #키 포인트 검출
 blank = np.zeros((1, 1))
 blobs = cv2.drawKeypoints(image, points, blank, (0, 0, 255),
-                          cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+                          cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS) #keypoints를 (0, 0, 255) 빨간색으로 표시
 # Detect blobs
 keypoints = detector.detect(image)
 
 number_of_blobs = len(keypoints)
 text = "Total Blobs: " + str(len(keypoints))
-cv2.putText(blobs, text, (20, 550), cv2.FONT_HERSHEY_SIMPLEX, 1, (100, 0, 255), 2)
+cv2.putText(blobs, text, (20, 550), cv2.FONT_HERSHEY_SIMPLEX, 1, (100, 0, 255), 2) #원형 도형 그리기 문자 hershey_simplex는 폰트
 
 plt.subplot(2, 2, 1)
 plt.imshow(blobs)
